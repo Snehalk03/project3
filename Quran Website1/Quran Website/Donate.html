@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 100px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .header p {
+            font-size: 16px;
+            color: #666;
+        }
+        .donation-type {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .donation-type button {
+            background-color: #e0f7fa;
+            border: 1px solid #009688;
+            color: #009688;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .donation-type button.active {
+            background-color: #009688;
+            color: white;
+        }
+        .amount-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .amount-options button {
+            background-color: #e0f7fa;
+            border: none;
+            color: #009688;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .amount-options button.active {
+            background-color: #009688;
+            color: white;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .footer {
+            position: relative;
+            background-image:url('surahs/Group-2566.jpg'); /* Add the correct path to your image */
+            background-size: cover;
+            background-position: center;
+            color: rgb(3, 3, 3);
+            padding: 60px;
+            text-align: center;
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="surahs/Rectangle 6.png" alt="Logo">
+            <h1>The Quran transforms lives. Help us spread its light.</h1>
+            <p>We invite you to become a monthly donor (no amount is too small) and pray that Allah accepts your support as a Sadaqa Jariyah (continuous charity). Monthly donations help us retain top talent and sustain operations so we focus less on fundraising and more on creating impact.</p>
+            <p>May every donor gain continuous blessings for every letter read, memorized, and listened to around the world, and for the knowledge gained by every user, all without ads and free of charge.</p>
+        </div>
+
+        <div class="donation-type">
+            <button class="active">One-time</button>
+            <button>Recurring</button>
+        </div>
+
+        <div class="form-group">
+            <label for="frequency">Donation frequency</label>
+            <select id="frequency">
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+        </div>
+
+        <div class="amount-options">
+            <button>$500</button>
+            <button>$100</button>
+            <button class="active">$50</button>
+            <button>$25</button>
+            <button>$10</button>
+            <button>Other</button>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="dedicate">
+            <label for="dedicate">Dedicate my donation in honor or in memory of someone</label>
+        </div>
+
+        <h2>Your Information</h2>
+        <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" required>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="hide-name">
+           
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="contact">
+            <label for="contact">It's okay to contact me in the future</label>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address *</label>
+            <input type="text" id="address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="zip">ZIP *</label>
+            <input type="text" id="zip" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City *</label>
+            <input type="text" id="city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State *</label>
+            <select id="state">
+                <option value="">Please Select</option>
+                <option value="state1">State 1</option>
+                <option value="state2">State 2</option>
+                <!-- Add all states -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country">
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <!-- Add more countries as needed -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Leave a comment</label>
+            <textarea id="comment" rows="4"></textarea>
+        </div>
+
+        <div class="footer">
+            <h2>Custom Quran Reading Goals</h2>
+            <p>Do you want to read 10 minutes a day, complete a Juz in a month, or finish the entire Quran in a year? It’s easy to create a custom goal and track your progress.</p>
+           
+        </div>
+    </div>
+</body>
+</html>
